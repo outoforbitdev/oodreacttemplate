@@ -14,8 +14,8 @@ stop:
 run :
 	$(MAKE) stop
 	$(MAKE) build
-	docker run -d -p 1798:80 --name $(project_name) $(project_name)
+	docker run -d -p $(PORT):80 --name $(project_name) $(project_name)
 
 deploy:
-	$(MAKE) clear
-	$(MAKE) run
+	$(MAKE) clean
+	$(MAKE) run $(PORT)
