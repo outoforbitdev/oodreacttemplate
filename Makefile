@@ -15,4 +15,4 @@ stop :
 run : stop build
 	docker run -d -p $(PORT):80 --name $(project_name) $(project_name)
 
-deploy : clean run
+deploy : run
