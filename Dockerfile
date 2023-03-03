@@ -9,7 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:${DOTNET_VERSION} AS build
   WORKDIR /app
   COPY oodreacttemplate/*.csproj oodreacttemplate/
   RUN dotnet restore oodreacttemplate/*.csproj
-  COPY . .
+  COPY ./oodreacttemplate ./oodreacttemplate
   RUN dotnet publish oodreacttemplate/oodreacttemplate.csproj -c release -o oodreacttemplate/bin/release/ --no-cache --no-restore
   RUN file="$(ls)" && echo $file
 
