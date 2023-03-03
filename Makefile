@@ -1,5 +1,6 @@
 project_name = oodreacttemplate
 NAME := $(project_name)
+PORT := 1798
 
 .PHONY: build clean stop run deploy
 
