@@ -13,6 +13,6 @@ stop :
 	-docker rm $(project_name)
 
 run : stop build
-	docker run -d -p $(PORT):80 --name $(project_name) $(project_name)
+	docker run -d -p $(PORT):80 --name $(NAME) $(project_name)
 
 deploy : run
