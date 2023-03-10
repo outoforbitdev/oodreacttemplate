@@ -3,13 +3,15 @@ ARG DOTNET_VERSION="6.0"
 ARG ASPNETCORE_ENVIRONMENT="Development"
 FROM mcr.microsoft.com/dotnet/sdk:${DOTNET_VERSION} AS build
   ENV ASPNETCORE_ENVIRONMENT=ASPNETCORE_ENVIRONMENT
-  RUN curl --silent --location https://deb.nodesource.com/setup_16.x | bash - \
+  RUN curl --silent --location https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
     && npm --version
   WORKDIR /app
   COPY oodreacttemplate/*.csproj oodreacttemplate/
   RUN dotnet restore oodreacttemplate/*.csproj
   COPY ./oodreacttemplate ./oodreacttemplate
+  RUN file="$(ls)" && echo $file
+  RUN more oodreacttemplate/ClientApp/src/index.js
   RUN dotnet publish oodreacttemplate/oodreacttemplate.csproj -c release -o oodreacttemplate/bin/release/ --no-cache --no-restore
   RUN file="$(ls)" && echo $file
 
