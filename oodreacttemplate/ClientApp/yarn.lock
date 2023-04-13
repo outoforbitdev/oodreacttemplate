@@ -7154,6 +7154,11 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
+oodreactts@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/oodreactts/-/oodreactts-0.1.1.tgz#3287e6771ef6937c2880c2392bab272da2fbf6de"
+  integrity sha512-Z4xyxrAzXNQKtfRV+5vffmrWn73H/H8Dp3tSBoPr01g/uQpk2wVy9Cl8V1oQ/utj+jSL+LO9gBGGVOEbT7+yGA==
+
 open@^8.0.9, open@^8.4.0:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/open/-/open-8.4.2.tgz#5b5ffe2a8f793dcd2aad73e550cb87b59cb084f9"

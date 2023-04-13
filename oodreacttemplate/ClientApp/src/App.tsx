@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { Home } from "./components/Home";
 
 import "./custom.css"
-import { setTheme, Themes } from "./lib/oodreactts/v1/utils/webpage";
+import { setTheme, Themes } from "oodreactts";
 import "./lib/oodreactts/src/v1/styles/Themes.css"
 
 export default class App extends Component {
