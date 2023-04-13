@@ -1,4 +1,0 @@
-[submodule "oodreacttemplate/ClientApp/src/lib/oodreactts"]
-	path = oodreacttemplate/ClientApp/src/lib/oodreactts
-	url = git@github.com:outoforbitdev/oodreactts.git
-	branch = main
